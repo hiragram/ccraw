@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/hiragram/ccraw/compare/v1.0.1...v1.1.0) (2025-06-26)
+
+
+### Features
+
+* improve page title with service description ([c3659f2](https://github.com/hiragram/ccraw/commit/c3659f2486aae11bbdc8767cf375a1db6d67cd6e))
+
 ## [1.0.1](https://github.com/hiragram/ccraw/compare/v1.0.0...v1.0.1) (2025-06-26)
 
 
