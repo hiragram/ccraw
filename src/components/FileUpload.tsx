@@ -54,14 +54,14 @@ export default function FileUpload({ onFileSelect, isLoading }: FileUploadProps)
         {isLoading ? (
           <div className={styles.loading}>
             <div className={styles.spinner}></div>
-            <p>ファイルを解析中...</p>
+            <p>Analyzing file...</p>
           </div>
         ) : (
           <>
             <div className={styles.uploadIcon}>📁</div>
-            <h3>JSONLファイルをアップロード</h3>
-            <p>ファイルをドラッグ&ドロップするか、クリックして選択してください</p>
-            <p className={styles.hint}>Claudeの会話履歴は <code>~/.claude/projects</code> にあります</p>
+            <h3>Upload JSONL File</h3>
+            <p>Drag & drop your file here, or click to select</p>
+            <p className={styles.hint}>Claude Code chat archives are located in <code>~/.claude/projects</code></p>
           </>
         )}
       </div>

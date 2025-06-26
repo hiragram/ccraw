@@ -1,10 +1,10 @@
 # ccraw
 
-A web-based Claude Code conversation data viewer and analyzer built with Next.js and React.
+A web-based Claude Code raw chat archive viewer built with Next.js and React.
 
 ## Overview
 
-ccraw (Claude Code Raw) is a specialized tool for visualizing and analyzing Claude Code conversation data stored in JSONL (JSON Lines) format. It provides a structured view of conversation messages with support for various content types including text, thinking blocks, tool usage, and tool results.
+ccraw (Claude Code Raw) is a specialized tool for viewing Claude Code raw chat archives stored in JSONL (JSON Lines) format. It provides a structured view of conversation messages with support for various content types including text, thinking blocks, tool usage, and tool results.
 
 ## Features
 
@@ -43,17 +43,17 @@ npm run dev
 ## Usage
 
 1. Open the application in your browser
-2. Upload a JSONL file containing Claude Code conversation data by:
+2. Upload a JSONL file containing Claude Code chat archives by:
    - Dragging and dropping the file onto the upload area
    - Clicking the upload area to select a file
-3. View the structured conversation data with:
+3. View the structured chat data with:
    - Message roles and content
    - Tool usage and results
    - Navigation between related messages
 4. Use the toggle controls to:
    - Show/hide raw JSON view
    - Show/hide invalid lines
-5. Click "新しいファイル" (New File) to upload a different file
+5. Click "New File" to upload a different file
 
 ## Data Format
 

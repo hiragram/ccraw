@@ -73,7 +73,7 @@ function renderContentItem(item: ContentItem, index: number) {
 
 export default function StructuredMessage({ message }: StructuredMessageProps) {
   if (!message.hasMessage) {
-    return <div className={styles.noMessage}>メッセージデータなし</div>;
+    return <div className={styles.noMessage}>No message data</div>;
   }
 
   return (
@@ -116,7 +116,7 @@ export default function StructuredMessage({ message }: StructuredMessageProps) {
           <a 
             href={`#message-${message.parentUuid}`}
             className={styles.parentLink}
-            title="親メッセージに移動"
+            title="Go to parent message"
           >
             {message.parentUuid.substring(0, 8)}...
           </a>

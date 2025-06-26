@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/hiragram/ccraw/issues"
   },
-  "description": "Claude conversation data viewer and analyzer",
+  "description": "Claude Code raw chat archive viewer",
   "dependencies": {
     "@types/node": "^24.0.4",
     "@types/react": "^19.1.8",

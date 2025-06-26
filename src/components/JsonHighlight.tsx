@@ -38,7 +38,7 @@ export default function JsonHighlight({ value }: JsonHighlightProps) {
   if (isLoading) {
     return (
       <pre style={{ color: '#666', fontStyle: 'italic' }}>
-        シンタックスハイライトを適用中...
+        Applying syntax highlighting...
       </pre>
     );
   }

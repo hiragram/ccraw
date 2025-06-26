@@ -21,7 +21,7 @@ export default function Home() {
       const parsedFile = parseJsonlFile(content, file.name);
       setJsonlFile(parsedFile);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'ファイルの読み込みに失敗しました');
+      setError(err instanceof Error ? err.message : 'Failed to load file');
     } finally {
       setIsLoading(false);
     }
@@ -56,15 +56,15 @@ export default function Home() {
       <div className={styles.container}>
         <header className={styles.header}>
           <h1>ccraw</h1>
-          <p>Claude conversation data viewer and analyzer</p>
+          <p>Claude Code raw chat archive viewer</p>
         </header>
 
         {error && (
           <div className={styles.error}>
-            <h3>エラーが発生しました</h3>
+            <h3>An error occurred</h3>
             <p>{error}</p>
             <button onClick={handleReset} className={styles.errorButton}>
-              リセット
+              Reset
             </button>
           </div>
         )}

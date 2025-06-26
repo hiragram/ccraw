@@ -57,17 +57,17 @@ export default function JsonlViewer({ jsonlFile, onReset }: JsonlViewerProps) {
           <h2>{jsonlFile.name}</h2>
           <div className={styles.stats}>
             <span className={styles.stat}>
-              サイズ: {formatFileSize(jsonlFile.size)}
+              Size: {formatFileSize(jsonlFile.size)}
             </span>
             <span className={styles.stat}>
-              総行数: {jsonlFile.totalLines}
+              Total lines: {jsonlFile.totalLines}
             </span>
             <span className={styles.stat}>
-              有効行: <span className={styles.valid}>{jsonlFile.validLines}</span>
+              Valid lines: <span className={styles.valid}>{jsonlFile.validLines}</span>
             </span>
             {jsonlFile.invalidLines > 0 && (
               <span className={styles.stat}>
-                無効行: <span className={styles.invalid}>{jsonlFile.invalidLines}</span>
+                Invalid lines: <span className={styles.invalid}>{jsonlFile.invalidLines}</span>
               </span>
             )}
           </div>
@@ -80,7 +80,7 @@ export default function JsonlViewer({ jsonlFile, onReset }: JsonlViewerProps) {
               checked={showJson}
               onChange={(e) => handleGlobalJsonToggle(e.target.checked)}
             />
-            生JSON表示
+            Show raw JSON
           </label>
           <label className={styles.checkbox}>
             <input
@@ -88,10 +88,10 @@ export default function JsonlViewer({ jsonlFile, onReset }: JsonlViewerProps) {
               checked={showInvalidLines}
               onChange={(e) => setShowInvalidLines(e.target.checked)}
             />
-            無効行も表示
+            Show invalid lines
           </label>
           <button onClick={onReset} className={styles.resetButton}>
-            新しいファイル
+            New file
           </button>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function JsonlViewer({ jsonlFile, onReset }: JsonlViewerProps) {
             >
             <div className={styles.lineNumber}>
               <div className={styles.leftSection}>
-                <span>行 {item.line}</span>
+                <span>Line {item.line}</span>
                 {messageData?.isSidechain && (
                   <span className={styles.sidechainBadge}>Sidechain</span>
                 )}
@@ -118,7 +118,7 @@ export default function JsonlViewer({ jsonlFile, onReset }: JsonlViewerProps) {
                 )}
               </div>
               <div className={styles.rightSection}>
-                {!item.isValid && <span className={styles.errorBadge}>エラー</span>}
+                {!item.isValid && <span className={styles.errorBadge}>Error</span>}
                 {item.isValid && (
                   <label className={styles.jsonToggle}>
                     <input
@@ -146,7 +146,7 @@ export default function JsonlViewer({ jsonlFile, onReset }: JsonlViewerProps) {
                 <div className={styles.errorContent}>
                   <div className={styles.rawContent}>{String(item.content)}</div>
                   <div className={styles.errorMessage}>
-                    エラー: {item.error}
+                    Error: {item.error}
                   </div>
                 </div>
               )}
