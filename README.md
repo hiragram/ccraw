@@ -25,9 +25,21 @@ ccraw (Claude Code Raw) is a specialized tool for viewing Claude Code raw chat a
 
 ## Installation
 
+### Option 1: Using npx (Recommended)
+
+Run ccraw directly without installation:
+
+```bash
+npx ccraw
+```
+
+This will start the application and automatically open it in your browser at [http://localhost:3000](http://localhost:3000).
+
+### Option 2: Development Setup
+
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/ccraw.git
+git clone https://github.com/hiragram/ccraw.git
 cd ccraw
 ```
 
