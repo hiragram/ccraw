@@ -219,6 +219,50 @@
   color: #333;
 }
 
+.inputProperties {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputProperty {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.inputPropertyName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0056b3;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.inputPropertyValue {
+  font-size: 0.85rem;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.inputDataFallback {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  color: #333;
+}
+
 .toolResultContent {
   background: #f0fff4;
   border-radius: 6px;

@@ -34,9 +34,29 @@ function renderContentItem(item: ContentItem, index: number) {
         </div>
         <div className={styles.toolInput}>
           <div className={styles.inputLabel}>Input:</div>
-          <pre className={styles.inputData}>
-            {JSON.stringify(item.input, null, 2)}
-          </pre>
+          <div className={styles.inputData}>
+            {typeof item.input === 'object' && item.input !== null ? (
+              <div className={styles.inputProperties}>
+                {Object.entries(item.input).map(([key, value]) => (
+                  <div key={key} className={styles.inputProperty}>
+                    <span className={styles.inputPropertyName}>{key}:</span>
+                    <span className={styles.inputPropertyValue}>
+                      {typeof value === 'string' 
+                        ? value 
+                        : typeof value === 'number' || typeof value === 'boolean'
+                          ? String(value)
+                          : JSON.stringify(value, null, 2)
+                      }
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <pre className={styles.inputDataFallback}>
+                {JSON.stringify(item.input, null, 2)}
+              </pre>
+            )}
+          </div>
         </div>
       </div>
     );
@@ -54,7 +74,25 @@ function renderContentItem(item: ContentItem, index: number) {
         <div className={styles.toolResultOutput}>
           <div className={styles.outputLabel}>Output:</div>
           <div className={styles.outputContent}>
-            {typeof item.content === 'string' ? item.content : JSON.stringify(item.content, null, 2)}
+            {typeof item.content === 'string' 
+              ? item.content 
+              : Array.isArray(item.content)
+                ? item.content.map((contentItem, contentIndex) => {
+                    if (contentItem.type === 'text' && contentItem.text) {
+                      return (
+                        <div key={contentIndex} className={styles.textContent}>
+                          {contentItem.text}
+                        </div>
+                      );
+                    }
+                    return (
+                      <div key={contentIndex} className={styles.rawContent}>
+                        {JSON.stringify(contentItem, null, 2)}
+                      </div>
+                    );
+                  })
+                : JSON.stringify(item.content, null, 2)
+            }
           </div>
         </div>
       </div>
