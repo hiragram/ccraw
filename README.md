@@ -1,5 +1,8 @@
 # ccraw
 
+[![npm downloads](https://img.shields.io/npm/dm/ccraw.svg)](https://www.npmjs.com/package/ccraw)
+[![npm version](https://img.shields.io/npm/v/ccraw.svg)](https://www.npmjs.com/package/ccraw)
+
 A web-based Claude Code raw chat archive viewer built with Next.js and React.
 
 ## Overview
