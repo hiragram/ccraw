@@ -2,15 +2,27 @@
   "name": "ccraw",
   "version": "1.0.0",
   "main": "index.js",
+  "bin": {
+    "ccraw": "./bin/ccraw.js"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["claude", "claude-code", "jsonl", "viewer", "conversation", "analyzer", "cli"],
+  "author": "hiragram",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiragram/ccraw.git"
+  },
+  "homepage": "https://github.com/hiragram/ccraw",
+  "bugs": {
+    "url": "https://github.com/hiragram/ccraw/issues"
+  },
   "description": "Claude conversation data viewer and analyzer",
   "dependencies": {
     "@types/node": "^24.0.4",

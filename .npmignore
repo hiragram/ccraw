@@ -1,0 +1,33 @@
+# Development files
+.next/
+.swc/
+node_modules/
+.git/
+.gitignore
+
+# Private/sensitive files
+.claude/
+.env*
+
+# Development directories
+jsonl-viewer/
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Build artifacts
+*.log
+npm-debug.log*
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Test files
+*.test.*
+__tests__/
+
+# Documentation (keep README.md)
+docs/
