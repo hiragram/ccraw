@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.0](https://github.com/hiragram/ccraw/compare/v1.0.1...v1.1.0) (2025-06-26)
+## [1.0.2](https://github.com/hiragram/ccraw/compare/v1.0.1...v1.0.2) (2025-06-26)
 
 
 ### Features

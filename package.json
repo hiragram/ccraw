@@ -1,6 +1,6 @@
 {
   "name": "ccraw",
-  "version": "1.1.0",
+  "version": "1.0.2",
   "main": "index.js",
   "bin": {
     "ccraw": "./bin/ccraw.js"
