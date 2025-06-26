@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/hiragram/ccraw/compare/v1.0.0...v1.0.1) (2025-06-26)
+
+
+### Bug Fixes
+
+* change npm publish trigger from tags to release events ([fd4055f](https://github.com/hiragram/ccraw/commit/fd4055f2bc911eef95e97ff5e779e64d58921a07))
+
 ## 1.0.0 (2025-06-26)
 
 
