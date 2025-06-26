@@ -59,9 +59,9 @@ function startNext() {
   const projectRoot = findProjectRoot();
   const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
   
-  // Check if we're in development or production mode
+  // Default to build mode unless --dev is explicitly specified
+  const isDev = process.argv.includes('--dev');
   const nextExists = fs.existsSync(path.join(projectRoot, '.next'));
-  const isDev = process.argv.includes('--dev') || !nextExists;
   
   // If not in dev mode and .next doesn't exist, build first
   if (!isDev && !nextExists) {
@@ -89,8 +89,7 @@ function startNextServer() {
   const projectRoot = findProjectRoot();
   const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
   
-  const nextExists = fs.existsSync(path.join(projectRoot, '.next'));
-  const isDev = process.argv.includes('--dev') || !nextExists;
+  const isDev = process.argv.includes('--dev');
   
   const command = isDev ? 'dev' : 'start';
   const args = [command];
@@ -142,14 +141,14 @@ Usage:
   npx ccraw [options]
 
 Options:
-  --dev          Run in development mode (default if .next doesn't exist)
+  --dev          Run in development mode (default is production mode)
   --port <port>  Specify port number (default: 3000)
   --help, -h     Show this help message
 
 Examples:
-  npx ccraw                # Start on port 3000
-  npx ccraw --port 8080    # Start on port 8080
-  npx ccraw --dev          # Force development mode
+  npx ccraw                # Start in production mode on port 3000
+  npx ccraw --port 8080    # Start in production mode on port 8080
+  npx ccraw --dev          # Start in development mode
 
 Once started, open your browser and upload JSONL files containing
 Claude Code conversation data for visualization and analysis.
