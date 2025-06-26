@@ -28,10 +28,36 @@ function findProjectRoot() {
 
 function main() {
   const projectRoot = findProjectRoot();
-  const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
   
   console.log('🚀 Starting ccraw (Claude Code Raw) viewer...');
   console.log('📂 Project root:', projectRoot);
+  
+  // Check if dependencies are installed
+  const nodeModulesPath = path.join(projectRoot, 'node_modules');
+  if (!fs.existsSync(nodeModulesPath)) {
+    console.log('📦 Installing dependencies...');
+    const npmInstall = spawn('npm', ['install'], {
+      cwd: projectRoot,
+      stdio: 'inherit'
+    });
+    
+    npmInstall.on('exit', (code) => {
+      if (code !== 0) {
+        console.error('❌ Failed to install dependencies');
+        process.exit(1);
+      }
+      startNext();
+    });
+    
+    return;
+  }
+  
+  startNext();
+}
+
+function startNext() {
+  const projectRoot = findProjectRoot();
+  const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
   
   // Check if we're in development or production mode
   const isDev = process.argv.includes('--dev') || !fs.existsSync(path.join(projectRoot, '.next'));
