@@ -60,7 +60,37 @@ function startNext() {
   const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
   
   // Check if we're in development or production mode
-  const isDev = process.argv.includes('--dev') || !fs.existsSync(path.join(projectRoot, '.next'));
+  const nextExists = fs.existsSync(path.join(projectRoot, '.next'));
+  const isDev = process.argv.includes('--dev') || !nextExists;
+  
+  // If not in dev mode and .next doesn't exist, build first
+  if (!isDev && !nextExists) {
+    console.log('🔨 Building application...');
+    const buildProcess = spawn(nextBin, ['build'], {
+      cwd: projectRoot,
+      stdio: 'inherit'
+    });
+    
+    buildProcess.on('exit', (code) => {
+      if (code !== 0) {
+        console.error('❌ Build failed');
+        process.exit(1);
+      }
+      startNextServer();
+    });
+    
+    return;
+  }
+  
+  startNextServer();
+}
+
+function startNextServer() {
+  const projectRoot = findProjectRoot();
+  const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
+  
+  const nextExists = fs.existsSync(path.join(projectRoot, '.next'));
+  const isDev = process.argv.includes('--dev') || !nextExists;
   
   const command = isDev ? 'dev' : 'start';
   const args = [command];
