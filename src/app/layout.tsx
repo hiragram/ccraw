@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'ccraw - Claude Code Raw Chat Archive Viewer',
-  description: 'Web-based viewer for Claude Code raw chat archives in JSONL format',
+  description: 'Claude conversation data viewer and analyzer',
 };
 
 export default function RootLayout({
