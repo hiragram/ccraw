@@ -39,7 +39,8 @@
     "public/",
     "next.config.js",
     "next-env.d.ts",
-    "tsconfig.json"
+    "tsconfig.json",
+    "package.json"
   ],
   "dependencies": {
     "next": "^15.3.4",
