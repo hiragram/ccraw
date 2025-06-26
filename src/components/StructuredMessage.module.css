@@ -1,0 +1,343 @@
+.container {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-left: 4px solid #007acc;
+}
+
+.noMessage {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  border-left: 4px solid #ccc;
+}
+
+.metadata {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.roleSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.parentSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.parentLink {
+  color: #007acc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #f0f8ff;
+  border: 1px solid #d0e7ff;
+  transition: all 0.2s ease;
+  font-family: monospace;
+}
+
+.parentLink:hover {
+  background: #e3f2fd;
+  border-color: #90caf9;
+  text-decoration: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.roleValue {
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.role-user {
+  background: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.role-assistant {
+  background: #f3e5f5;
+  color: #7b1fa2;
+  border: 1px solid #e1bee7;
+}
+
+.role-system {
+  background: #fff3e0;
+  color: #f57c00;
+  border: 1px solid #ffcc02;
+}
+
+.role-function {
+  background: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content {
+  background: white;
+  border-radius: 6px;
+  padding: 12px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.contentArray {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.textContent {
+  background: white;
+  border-radius: 6px;
+  padding: 12px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.thinkingContent {
+  background: #f8f9fb;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #e6e7f0;
+  border-left: 4px solid #9b59b6;
+}
+
+.thinkingLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8e44ad;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.thinkingText {
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid #d6d7e3;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.toolUseContent {
+  background: #f0f8ff;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #b3d9ff;
+  border-left: 4px solid #007acc;
+}
+
+.toolUseHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.toolUseLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0056b3;
+}
+
+.toolName {
+  background: #007acc;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.toolInput {
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #b3d9ff;
+}
+
+.inputLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 8px;
+}
+
+.inputData {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  color: #333;
+}
+
+.toolResultContent {
+  background: #f0fff4;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #c3e6cb;
+  border-left: 4px solid #28a745;
+}
+
+.toolResultHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.toolResultLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #155724;
+}
+
+.toolUseId {
+  background: #28a745;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.toolResultOutput {
+  background: white;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+}
+
+.outputLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #155724;
+  margin-bottom: 8px;
+}
+
+.outputContent {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  color: #333;
+  line-height: 1.4;
+}
+
+.toolUseResultSection {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toolUseResultContent {
+  background: #fff8dc;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #ffeaa7;
+  border-left: 4px solid #fdcb6e;
+}
+
+.toolUseResultData {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+  background: white;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre-wrap;
+  color: #333;
+}
+
+.unknownContent {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+}
+
+.contentType {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 8px;
+}
+
+.contentData {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+  background: white;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  overflow-x: auto;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+  .metadata {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .container {
+    padding: 12px;
+  }
+}

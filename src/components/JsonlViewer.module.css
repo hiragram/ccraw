@@ -1,0 +1,289 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fileInfo h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  padding: 8px 16px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.valid {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.invalid {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin: 0;
+}
+
+.resetButton {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.resetButton:hover {
+  background: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.pageButton {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.pageButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 120px;
+  text-align: center;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dataItem {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.invalidItem {
+  border-left: 4px solid #dc3545;
+}
+
+.lineNumber {
+  background: #f8f9fa;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.jsonToggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #007acc;
+  cursor: pointer;
+}
+
+.jsonToggle input {
+  margin: 0;
+  cursor: pointer;
+}
+
+.errorBadge {
+  background: #dc3545;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.sidechainBadge {
+  background: #dc3545;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.metaBadge {
+  background: #6c757d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+
+.content {
+  padding: 16px;
+}
+
+.jsonContent {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.jsonContent :global(.json-formatted) {
+  margin: 0;
+  padding: 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background: transparent;
+  border: none;
+}
+
+.jsonContent :global(pre) {
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  margin: 0;
+  padding: 12px;
+  border-radius: 6px;
+  background: transparent;
+  overflow-wrap: break-word;
+}
+
+.jsonContent :global(code) {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.errorContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rawContent {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 4px;
+  color: #666;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.errorMessage {
+  color: #dc3545;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: #f8d7da;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .controls {
+    align-items: flex-start;
+  }
+  
+  .stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
