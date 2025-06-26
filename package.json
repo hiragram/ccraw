@@ -32,16 +32,27 @@
     "url": "https://github.com/hiragram/ccraw/issues"
   },
   "description": "Claude Code raw chat archive viewer",
+  "files": [
+    "bin/",
+    ".next/",
+    "src/",
+    "public/",
+    "next.config.js",
+    "next-env.d.ts",
+    "tsconfig.json"
+  ],
   "dependencies": {
+    "next": "^15.3.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "shiki": "^3.7.0"
+  },
+  "devDependencies": {
     "@types/node": "^24.0.4",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "eslint": "^9.29.0",
     "eslint-config-next": "^15.3.4",
-    "next": "^15.3.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "shiki": "^3.7.0",
     "typescript": "^5.8.3"
   }
 }
