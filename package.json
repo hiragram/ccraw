@@ -12,7 +12,15 @@
     "lint": "next lint",
     "prepublishOnly": "npm run build"
   },
-  "keywords": ["claude", "claude-code", "jsonl", "viewer", "conversation", "analyzer", "cli"],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "jsonl",
+    "viewer",
+    "conversation",
+    "analyzer",
+    "cli"
+  ],
   "author": "hiragram",
   "license": "ISC",
   "repository": {
