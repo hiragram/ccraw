@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/hiragram/ccraw/compare/v1.0.2...v1.0.3) (2025-06-26)
+
+
+### Bug Fixes
+
+* revert page description to original version ([b088fbc](https://github.com/hiragram/ccraw/commit/b088fbc23baec915ce4c290c9f13a7032d7359bc))
+
 ## [1.0.2](https://github.com/hiragram/ccraw/compare/v1.0.1...v1.0.2) (2025-06-26)
 
 
