@@ -55,8 +55,8 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h1>JSONL Viewer</h1>
-          <p>JSONLファイルを綺麗に表示するツールです</p>
+          <h1>ccraw</h1>
+          <p>Claude conversation data viewer and analyzer</p>
         </header>
 
         {error && (

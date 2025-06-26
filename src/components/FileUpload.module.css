@@ -34,10 +34,19 @@
   margin-bottom: 10px;
 }
 
-.supportedFormats {
+.hint {
   font-size: 0.9rem;
-  color: #888;
-  font-style: italic;
+  color: #666;
+  margin-top: 20px;
+}
+
+.hint code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: #333;
 }
 
 .loading {

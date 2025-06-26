@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'JSONL Viewer',
-  description: 'JSONLファイルを綺麗に表示するツール',
+  title: 'ccraw',
+  description: 'Claude conversation data viewer and analyzer',
 };
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 {
-  "name": "jsonl-viewer",
+  "name": "ccraw",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Claude conversation data viewer and analyzer",
   "dependencies": {
     "@types/node": "^24.0.4",
     "@types/react": "^19.1.8",
@@ -21,6 +21,7 @@
     "next": "^15.3.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "shiki": "^3.7.0",
     "typescript": "^5.8.3"
   }
 }

@@ -61,7 +61,7 @@ export default function FileUpload({ onFileSelect, isLoading }: FileUploadProps)
             <div className={styles.uploadIcon}>📁</div>
             <h3>JSONLファイルをアップロード</h3>
             <p>ファイルをドラッグ&ドロップするか、クリックして選択してください</p>
-            <p className={styles.supportedFormats}>対応形式: .jsonl, .json</p>
+            <p className={styles.hint}>Claudeの会話履歴は <code>~/.claude/projects</code> にあります</p>
           </>
         )}
       </div>
