@@ -34,13 +34,11 @@
   "description": "Claude Code raw chat archive viewer",
   "files": [
     "bin/",
-    ".next/",
     "src/",
     "public/",
     "next.config.js",
     "next-env.d.ts",
-    "tsconfig.json",
-    "package.json"
+    "tsconfig.json"
   ],
   "dependencies": {
     "next": "^14.2.0",
