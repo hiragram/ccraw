@@ -34,7 +34,9 @@ function main() {
   
   // Check if dependencies are installed
   const nodeModulesPath = path.join(projectRoot, 'node_modules');
-  if (!fs.existsSync(nodeModulesPath)) {
+  const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
+  
+  if (!fs.existsSync(nodeModulesPath) || !fs.existsSync(nextBin)) {
     console.log('📦 Installing dependencies...');
     const npmInstall = spawn('npm', ['install'], {
       cwd: projectRoot,
