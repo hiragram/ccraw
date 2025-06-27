@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.1.0](https://github.com/hiragram/ccraw/compare/v1.0.3...v1.1.0) (2025-06-27)
+
+
+### Features
+
+* remove npm publishing from GitHub Actions workflow ([57ef0b0](https://github.com/hiragram/ccraw/commit/57ef0b0c4cc3ff4e0d19bc2dd3a201eacfc151a1))
+
+
+### Bug Fixes
+
+* add automatic dependency installation to CLI script ([5fbc53a](https://github.com/hiragram/ccraw/commit/5fbc53a437bc9c175cb8eeef4c3466b2fc350d43))
+* add debugging and better error handling for build process ([5686d60](https://github.com/hiragram/ccraw/commit/5686d60078a485d378e5ea9e6da3b68c68699915))
+* default to production mode to avoid TypeScript compilation issues ([1740b6a](https://github.com/hiragram/ccraw/commit/1740b6a1b671e8159836a913bfbc4067b4dbe817))
+* downgrade to Next.js 14 and React 18 for better TypeScript compatibility ([87d7263](https://github.com/hiragram/ccraw/commit/87d7263368bed63cfd7bd109d75badd0191defde))
+* improve build detection to ensure complete builds ([e874b96](https://github.com/hiragram/ccraw/commit/e874b969f10a00ab379416a2761907ba8e92147c))
+* improve dependency checking for reliable cross-directory execution ([2cc0c05](https://github.com/hiragram/ccraw/commit/2cc0c05222b44c3a1c72074d24bb252d5e3d65ac))
+* improve path resolution for npm package distribution ([0635bae](https://github.com/hiragram/ccraw/commit/0635baeeeb7bfa363a6aec52eb718c40d86864f7))
+* improve TypeScript and webpack configuration for proper compilation ([951a2a2](https://github.com/hiragram/ccraw/commit/951a2a26638b407568ed1fe1db562fc29b83916c))
+* improve TypeScript handling and build process for npm distribution ([f4c6c63](https://github.com/hiragram/ccraw/commit/f4c6c6399c7df0a3b2dfb05ee44bbe3d0d25f41e))
+* include built application and default to production mode ([343ce6f](https://github.com/hiragram/ccraw/commit/343ce6f032435a1d1e995744061ed1aec94819b9))
+* include built Next.js application excluding cache files ([72bde52](https://github.com/hiragram/ccraw/commit/72bde528e6e3ade9f3275d92010b445ac3021c97))
+* move TypeScript and type definitions to runtime dependencies ([29f02d8](https://github.com/hiragram/ccraw/commit/29f02d8687ba4ab7ce1b98fef1c3cb9d087fd401))
+* properly configure npm package dependencies and files ([482cac1](https://github.com/hiragram/ccraw/commit/482cac157caa170dee1b1e78f6ffc0cf5885d302))
+* revert to development mode as default for better TypeScript support ([24a989b](https://github.com/hiragram/ccraw/commit/24a989b96e17062440b342be2e88c9ace522ce07))
+* revert to standard approach without including .next in git ([f44014b](https://github.com/hiragram/ccraw/commit/f44014bb32857cc2a13c326afd82b8e36160450d))
+* simplify Next.js and TypeScript configuration ([aa5cb7f](https://github.com/hiragram/ccraw/commit/aa5cb7ff8a0184d5c1bcd4187c4179e732daccab))
+
+
+### Reverts
+
+* remove npx support and restore package configurations ([20cb620](https://github.com/hiragram/ccraw/commit/20cb620835a4c543b564e97de7008b54e77dc9db))
+
 ## [1.0.3](https://github.com/hiragram/ccraw/compare/v1.0.2...v1.0.3) (2025-06-26)
 
 
