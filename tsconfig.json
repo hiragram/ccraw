@@ -27,8 +27,7 @@
         "./src/*"
       ]
     },
-    "target": "ES2020",
-    "forceConsistentCasingInFileNames": true
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
@@ -38,8 +37,5 @@
   ],
   "exclude": [
     "node_modules"
-  ],
-  "ts-node": {
-    "esm": true
-  }
+  ]
 }
