@@ -63,12 +63,24 @@ function startNext() {
   const isDev = process.argv.includes('--dev');
   const nextExists = fs.existsSync(path.join(projectRoot, '.next'));
   
+  console.log(`🔍 Checking build status - .next exists: ${nextExists}, dev mode: ${isDev}`);
+  
   // If not in dev mode and .next doesn't exist, build first
   if (!isDev && !nextExists) {
     console.log('🔨 Building application...');
     const buildProcess = spawn(nextBin, ['build'], {
       cwd: projectRoot,
       stdio: 'inherit'
+    });
+    
+    buildProcess.on('error', (error) => {
+      if (error.code === 'ENOENT') {
+        console.error('❌ Error: Next.js not found. Please run "npm install" first.');
+        process.exit(1);
+      } else {
+        console.error('❌ Error building ccraw:', error.message);
+        process.exit(1);
+      }
     });
     
     buildProcess.on('exit', (code) => {
