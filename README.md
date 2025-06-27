@@ -115,4 +115,4 @@ src/
 
 ## License
 
-ISC
+MIT

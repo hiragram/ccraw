@@ -18,7 +18,7 @@
     "cli"
   ],
   "author": "hiragram",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/hiragram/ccraw.git"
