@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/hiragram/ccraw/compare/v1.1.0...v1.2.0) (2025-06-27)
+
+
+### Features
+
+* change license to MIT ([f5862cd](https://github.com/hiragram/ccraw/commit/f5862cd483be566c35c3897dd463423fcc23f5fe))
+
 ## [1.1.0](https://github.com/hiragram/ccraw/compare/v1.0.3...v1.1.0) (2025-06-27)
 
 
