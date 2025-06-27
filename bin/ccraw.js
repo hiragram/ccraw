@@ -61,15 +61,17 @@ function startNext() {
   const projectRoot = findProjectRoot();
   const nextBin = path.join(projectRoot, 'node_modules', '.bin', 'next');
   
-  // Default to development mode, but prefer production if built
+  // Check if we have a complete build
   const nextExists = fs.existsSync(path.join(projectRoot, '.next'));
+  const buildIdExists = fs.existsSync(path.join(projectRoot, '.next', 'BUILD_ID'));
   const forceDev = process.argv.includes('--dev');
   const isDev = forceDev;
+  const needsBuild = !isDev && (!nextExists || !buildIdExists);
   
-  console.log(`🔍 Checking build status - .next exists: ${nextExists}, dev mode: ${isDev}`);
+  console.log(`🔍 Checking build status - .next exists: ${nextExists}, BUILD_ID exists: ${buildIdExists}, dev mode: ${isDev}`);
   
-  // If not in dev mode and .next doesn't exist, build first
-  if (!isDev && !nextExists) {
+  // If not in dev mode and we need a build, build first
+  if (needsBuild) {
     console.log('🔨 Building application...');
     const buildProcess = spawn(nextBin, ['build'], {
       cwd: projectRoot,
